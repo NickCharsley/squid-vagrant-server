@@ -2,6 +2,10 @@
 
 Execute `vagrant up` to launch a private Squid proxy server at 10.0.0.10:3983. It also runs squid-deb-proxy at 10.0.0.10:8080.
 
-Copy the `global_Vagrantfile` into Vagrant's global config directory to have all machines route their requests through the proxy.
+#### Routing Vagrant machines through the proxy
 
-    cp global_Vagrantfile ~/.vagrant.d/Vagrantfile
+* Install the Vagrant proxy plugin:
+  * `vagrant plugin install vagrant-proxyconf`
+* Copy the `global_Vagrantfile` to the global config directory to affect all Vagrantfiles everywhere:
+  * `cp global_Vagrantfile ~/.vagrant.d/Vagrantfile`
+
